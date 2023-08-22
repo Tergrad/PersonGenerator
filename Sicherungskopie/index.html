@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="dataLibrary.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+                    
+            <h1>Person Generator</h1>
+                <div>
+                    <label for="classSelect"></label>
+                <div id="classCardsContainer">
+                    <div class="classCard" data-class="All" style="background-image: url('images/All\ Classes.webp')">
+                        <span>All</span>
+                    </div>
+
+                    <div class="classCard" data-class="Proletariat" style="background-image: url('images/Proletariat.webp')">
+                        <span>Proletariat</span>
+                    </div>
+
+                    <div class="classCard" data-class="Bourgeoisie" style="background-image: url('images/Bourgeoisie.webp')">
+                        <span>Bourgeoisie</span>
+                    </div>
+
+                    <div class="classCard" data-class="Aristokratie" style="background-image: url('images/Aristocracy.webp')">
+                        <span>Aristokratie</span>
+                    </div>
+            </div>
+        </div>
+
+
+        <div>
+                <div class="slider-container"> 
+                    <div class="slider-wrapper">
+                        <label for="numPersons">Number of Persons:</label>
+                        <input type="range" id="numPersons" value="1" min="1" max="10">
+                        <span id="numPersonsDisplay">1</span>  <!-- Move this inside .slider-wrapper -->
+                    </div>
+                </div>
+        
+        
+                <div>
+                    <button onclick="generateAndDisplay()">Generate</button>
+                </div>
+
+            </div>
+
+
+            <div id="outputContainer">
+                <div id="cardsContainer">
+                </div>
+            </div>
+   
+</body>
+
+</html>

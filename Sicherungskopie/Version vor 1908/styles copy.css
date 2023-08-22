@@ -1,0 +1,175 @@
+/* Styling */
+body {
+    background: linear-gradient(to bottom, #1a1a2e, #0a0a1a);
+    color: #f4f4f2;
+    font-family: 'Arial', sans-serif;
+    padding: 2%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Times New Roman', serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px #2e2e5a;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 0 15px 15px 0; 
+    border-radius: 5px;
+    border: 1px solid #d4af37;
+}
+
+button {
+    background-color: #d4af37;
+    color: #1a1a2e;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+button:hover {
+    background-color: #b7950b;
+}
+
+table tr:hover {
+    background-color: #3c3c6e;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+table {
+    max-width: 95%; 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: none;
+}
+
+
+table, th, td {
+    border-radius: 5px; /* Adjust to preference */
+}
+
+th, td {
+    padding: 20px;
+    border: 1px solid #d4af37;
+    border-bottom: none; /* No border-bottom for every cell */
+    text-align: center;
+    vertical-align: middle;
+}
+
+th:last-child, td:last-child {
+    border-right: 1px solid #d4af37; /* Bring back right border for the last column */
+}
+
+th:first-child, td:first-child {
+    border-left: 1px solid #d4af37; /* Bring back left border for the first column */
+}
+
+/* Removing borders for the last row cells */
+tr:last-child td {
+    border-bottom: none; 
+    border-left: none;
+    border-right: none;
+}
+
+/* Bringing back top border for continuity in cells except first and last */
+tr:last-child td:not(:first-child):not(:last-child) {
+    border-top: 1px solid #d4af37;
+}
+
+/* ... rest of the styles ... */
+
+tr:nth-child(odd) {
+    background-color: #2e2e5a;
+}
+
+.clothing-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.clothing-list li {
+    margin-bottom: 5px;
+}
+
+.clothing-list {
+    list-style-type: none;
+    padding-left: 0;
+}   
+
+td > button {
+    background-color: #f4f4f2;
+    color: #1a1a2e;
+    border: 2px solid #d4af37;
+}
+
+td > button:hover {
+    background-color: #e0e0e0;
+}
+
+#outputContainer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+#tableContainer {
+    flex: 1;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+}
+
+#buttonContainer > button {
+    margin-top: 10px;
+}
+
+#tableContainer {
+    overflow-x: auto;
+    width: 100%; 
+}
+@media only screen and (max-width: 768px) {
+    th, td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    input, select, button {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    th, td {
+        padding: 15px;
+    }
+
+    input, select, button {
+        padding: 8px;
+        font-size: 0.95em;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,232 @@
+/* Styling */
+
+
+body {
+    background-color:#22201B;
+    color: #625949;
+    font-family: 'Old Standard TT', serif;
+    padding: 2%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Bristol Maver', serif;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #22201B;
+    text-align: center;
+}
+
+
+button {
+    display: block;
+    width: 110px;
+    height: 90px;
+    margin: 20px auto;
+    background-image: url(/images/GeneratorButton.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0);
+    font-weight: bold;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+
+.slider-wrapper {
+    display:flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;    
+}
+
+label {
+    margin-right: 10px;
+    white-space: nowrap;
+    line-height: 25px;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;  /* Increase the height for a thicker track */
+    border-radius: 7.5px;  /* Half of the height for a rounded look */
+    background: #625949;
+    outline: none;
+    transition: opacity 0.2s;
+    padding: 5px 0;
+}
+
+/* Add styling for Firefox's track */
+.slider::-moz-range-track {
+    background: #625949;
+    border-radius: 7.5px;
+    height: 15px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;  /* Increase for a bigger thumb */
+    height: 20px;
+    border-radius: 50%;
+    background: #625949;
+    cursor: pointer;
+    box-shadow: #625949;  /* Adding shadow */
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #625949;
+    ;
+    cursor: pointer;
+    box-shadow: #625949;
+}
+
+
+.cardDetail strong + ul {
+    margin-top: 0px;
+}
+
+.clothing-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+#outputContainer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+ 
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+}
+
+#buttonContainer > button {
+    margin-top: 10px;
+}
+
+
+#classCardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.classCard {
+    cursor: pointer;
+    width: 150px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.classCard span {
+    display: block;    /* Makes the span take up the full width of the card, so it can be centered properly */
+    position: absolute;
+    bottom: -20px;     /* Adjust this value to control the vertical spacing between the card's image and the label */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the text horizontally relative to the card */
+    color: white;      /* Adjust to match your design */
+    font-weight: bold; /* Makes the text bold; adjust to match your design */
+}
+
+.classCard.active {
+    border: 2px solid #625949;
+    box-shadow: 0 0 10px rgba(130, 128, 100, 0.3);
+}
+
+.classCard:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
+#cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.personCard {
+    border: 2px solid #625949;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #1a1a1a;
+    max-width: 200px;  /* or whatever width you desire */
+    color: #99845f;
+    
+}
+
+.cardHeader {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #bda378;
+    text-align: center;
+}
+
+.cardDetail {
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    th, td {
+        padding: 15px;
+    }
+
+    input, select, button {
+        padding: 8px;
+        font-size: 0.95em;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
