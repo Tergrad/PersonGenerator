@@ -72,7 +72,7 @@ label {
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
+    width: 99%;
     height: 15px;  /* Increase the height for a thicker track */
     border-radius: 7.5px;  /* Half of the height for a rounded look */
     background: #625949;
