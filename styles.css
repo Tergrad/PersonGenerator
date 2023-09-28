@@ -29,7 +29,7 @@ button {
     width: 110px;
     height: 90px;
     margin: 20px auto;
-    background-image: url(/images/GeneratorButton.webp);
+    background-image: url(./images/GeneratorButton.webp);
     background-position: center;
     background-size: cover;
     text-align: center;
